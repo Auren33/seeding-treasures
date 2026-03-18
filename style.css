@@ -81,10 +81,14 @@
   white-space: nowrap;
 }
 
-.nav__link:hover,
-.nav__link--active {
+.nav__link:hover {
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.12);
+}
+
+.nav__link--active {
+  color: var(--color-accent);
+  background: none;
 }
 
 /* Dropdown */
@@ -158,17 +162,18 @@
 /* Donate CTA button in header */
 .btn-donate-header {
   display: none;
-  background: var(--color-accent);
+  background: transparent;
   color: #FFFFFF;
   font-weight: 600;
   font-size: var(--text-sm);
   padding: var(--space-2) var(--space-5);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
+  border: 1px solid #FFFFFF;
   white-space: nowrap;
 }
 
 .btn-donate-header:hover {
-  background: var(--color-accent-dark);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-1px);
 }
 
@@ -970,7 +975,7 @@
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--color-primary-dark);
+  background: var(--color-primary);
   color: var(--color-text-inverse);
   padding: var(--space-10) var(--space-4) var(--space-6);
 }

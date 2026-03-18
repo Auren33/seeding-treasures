@@ -108,25 +108,28 @@
     <div class="container">
       <div class="form-container form-container--wide fade-up">
         <h3 class="form__title">Volunteer Skills and Interests</h3>
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for your interest! We will be in touch soon.');">
+        <form action="https://formsubmit.co/admin@seedingtreasures.org" method="POST">
+          <input type="hidden" name="_subject" value="New Volunteer Application — Seeding Treasures">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://seedingtreasures.org/volunteer.html">
           <div class="form__row">
             <div class="form__group">
               <label class="form__label" for="vol-first">First Name</label>
-              <input type="text" id="vol-first" class="form__input" placeholder="Your first name" required>
+              <input type="text" id="vol-first" name="first_name" class="form__input" placeholder="Your first name" required>
             </div>
             <div class="form__group">
               <label class="form__label" for="vol-last">Last Name</label>
-              <input type="text" id="vol-last" class="form__input" placeholder="Your last name" required>
+              <input type="text" id="vol-last" name="last_name" class="form__input" placeholder="Your last name" required>
             </div>
           </div>
           <div class="form__row">
             <div class="form__group">
               <label class="form__label" for="vol-email">Email</label>
-              <input type="email" id="vol-email" class="form__input" placeholder="your@email.com" required>
+              <input type="email" id="vol-email" name="email" class="form__input" placeholder="your@email.com" required>
             </div>
             <div class="form__group">
               <label class="form__label" for="vol-phone">Phone</label>
-              <input type="tel" id="vol-phone" class="form__input" placeholder="(555) 123-4567">
+              <input type="tel" id="vol-phone" name="phone" class="form__input" placeholder="(555) 123-4567">
             </div>
           </div>
 

@@ -85,39 +85,42 @@
     <div class="container">
       <div class="form-container form-container--wide fade-up">
         <h3 class="form__title">Ownership Program Application</h3>
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for your application! We will review it and contact you.');">
+        <form action="https://formsubmit.co/admin@seedingtreasures.org" method="POST">
+          <input type="hidden" name="_subject" value="New Ownership Application — Seeding Treasures">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://seedingtreasures.org/owner-application.html">
           <div class="form__row">
             <div class="form__group">
               <label class="form__label" for="oa-first">First Name *</label>
-              <input type="text" id="oa-first" class="form__input" required>
+              <input type="text" id="oa-first" name="first_name" class="form__input" required>
             </div>
             <div class="form__group">
               <label class="form__label" for="oa-last">Last Name *</label>
-              <input type="text" id="oa-last" class="form__input" required>
+              <input type="text" id="oa-last" name="last_name" class="form__input" required>
             </div>
           </div>
           <div class="form__row">
             <div class="form__group">
               <label class="form__label" for="oa-email">Email *</label>
-              <input type="email" id="oa-email" class="form__input" required>
+              <input type="email" id="oa-email" name="email" class="form__input" required>
             </div>
             <div class="form__group">
               <label class="form__label" for="oa-phone">Phone *</label>
-              <input type="tel" id="oa-phone" class="form__input" required>
+              <input type="tel" id="oa-phone" name="phone" class="form__input" required>
             </div>
           </div>
           <div class="form__group">
             <label class="form__label" for="oa-address">Current Address</label>
-            <input type="text" id="oa-address" class="form__input" placeholder="Street address">
+            <input type="text" id="oa-address" name="address" class="form__input" placeholder="Street address">
           </div>
           <div class="form__row">
             <div class="form__group">
               <label class="form__label" for="oa-city">City</label>
-              <input type="text" id="oa-city" class="form__input">
+              <input type="text" id="oa-city" name="city" class="form__input">
             </div>
             <div class="form__group">
               <label class="form__label" for="oa-state">State</label>
-              <select id="oa-state" class="form__select">
+              <select id="oa-state" name="state" class="form__select">
                 <option value="">Select State</option>
                 <option value="GA">Georgia</option>
                 <option value="FL">Florida</option>
@@ -129,16 +132,16 @@
           <div class="form__row">
             <div class="form__group">
               <label class="form__label" for="oa-zip">ZIP Code</label>
-              <input type="text" id="oa-zip" class="form__input">
+              <input type="text" id="oa-zip" name="zip" class="form__input">
             </div>
             <div class="form__group">
               <label class="form__label" for="oa-income">Annual Income</label>
-              <input type="text" id="oa-income" class="form__input" placeholder="Approximate annual income">
+              <input type="text" id="oa-income" name="annual_income" class="form__input" placeholder="Approximate annual income">
             </div>
           </div>
           <div class="form__group">
             <label class="form__label" for="oa-current">Current Housing Situation</label>
-            <select id="oa-current" class="form__select">
+            <select id="oa-current" name="current_housing" class="form__select">
               <option value="">Select</option>
               <option value="renting">Renting</option>
               <option value="public-housing">Public Housing / Section 8</option>
@@ -148,7 +151,7 @@
           </div>
           <div class="form__group">
             <label class="form__label" for="oa-household">Household Size</label>
-            <select id="oa-household" class="form__select">
+            <select id="oa-household" name="household_size" class="form__select">
               <option value="">Select</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -160,7 +163,7 @@
           </div>
           <div class="form__group">
             <label class="form__label" for="oa-credit">Have you completed a financial literacy program?</label>
-            <select id="oa-credit" class="form__select">
+            <select id="oa-credit" name="credit_score_range" class="form__select">
               <option value="">Select</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -169,7 +172,7 @@
           </div>
           <div class="form__group">
             <label class="form__label" for="oa-message">Why are you interested in homeownership?</label>
-            <textarea id="oa-message" class="form__textarea" placeholder="Tell us about your goals and why you'd like to participate in our ownership program..."></textarea>
+            <textarea id="oa-message" name="goals" class="form__textarea" placeholder="Tell us about your goals and why you'd like to participate in our ownership program..."></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--lg form__submit">Submit Application</button>
         </form>
